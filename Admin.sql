@@ -18,7 +18,8 @@ DStatus bit
 
 create table Orders
 (
-UserId int foreign key references Users(Id),
+Id int primary key identity,
+UserId int foreign key references Users(Id) not null,
 OrderId int,
 BookTitle nvarchar(50),
 BookCatName nvarchar(50),
