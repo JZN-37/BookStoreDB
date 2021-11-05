@@ -3,11 +3,11 @@ use BookStoreApp
 
 create table Users
 (
-Id int primary key identity,
-UName nvarchar(20),   --concat FName and Lname from UI--
+Id int primary key,
+UName nvarchar(20) unique,   
 UPwd nvarchar(20),
-UMobile nvarchar(10) unique,
-UEmail nvarchar(50) unique,
+UMobile nvarchar(10),
+UEmail nvarchar(50),
 UStatus bit,                    --activated or deactivated--
 UOrderNo int default 0
 )
